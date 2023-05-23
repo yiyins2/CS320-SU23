@@ -1,6 +1,6 @@
 # Lab 2B: Files
 
-1. Discuss with your group: "If you could shrink any animal to puppy-size, what animal would you have as a pet?"
+1. Share with your group: "If you could shrink any animal to puppy-size, what animal would you have as a pet?"
 
 2. Practice Python [files and JSON](./files-json)
 

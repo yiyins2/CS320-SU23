@@ -1,6 +1,6 @@
 # Lab 4A: BST & Searching
 
-1. Share with your group: 
+1. Share with your group: *If you had to eat one meal everyday for the rest of your life what would it be?*
 
 2. Practice graph [search order](./dfs-vs-bfs)
 
