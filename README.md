@@ -23,7 +23,6 @@ git clone git@github.com:yiyins2/CS320-SU23.git
 * [lab 3B](./labs/lab3B.md)
 * [lab 4A](./labs/lab4A.md)
 * [lab 4B](./labs/lab4B.md)
-* [lab 5A](./labs/lab5A.md)
 * [lab 5B](./labs/lab5B.md)
 * [lab 6A](./labs/lab6A.md)
 * [lab 6B](./labs/lab6B.md)
