@@ -235,4 +235,4 @@ Write a recursive function or method to count the number of leaf nodes present i
 
 ### Q10: What is the fourth largest interest rate in the Bank BST?
 
-**Hint:** you could write a recursive function or method that can return the top 3 (or N) keys for any subtree.
+**Hint:** you could write a recursive function or method that can return the top 4 (or N) keys for any subtree.
