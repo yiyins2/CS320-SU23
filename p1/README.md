@@ -480,7 +480,7 @@ If you pass `cwd="????"` to `check_output`, you can run the `git log` command in
 
 Answer with a list.  Commits with earlier dates should be later in the list.
 
-### Q27: what did the `README` file contain after the 32rd commit?
+### Q27: what did the `README` file contain after the 100th commit?
 
 Use `check_output` to run a `git checkout` command to switch to that commit, before reading `flask/README` the way you would read any regular text file in Python (using `open` and `.read`).
 
