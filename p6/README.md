@@ -277,7 +277,7 @@ In terms of tester scores, this question is weighted to be worth 2 regular quest
 
 1. Construct at least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
 2. Perform cross validation on both your models over your training dataset
-3. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) mean of cross validation scores is high, (b) variance of cross validation scores is low, (c) model is simple, and (d) anything else you think is important.
+3. Write a comment recommending which model you recommend for this prediction task. Factors you **must** consider are (a) mean of cross validation scores is high, (b) variance of cross validation scores is low. Factors you might consider are (c) model is simple, and (d) anything else you think is important.
 4. Fit your recommended model to the entire training dataset and score it against the test dataset
 
 ### Q17: How does your recommended model score against the test dataset?
