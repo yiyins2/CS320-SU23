@@ -283,7 +283,7 @@ looked at least one filing for a company in that state.
 For each web request that has a corresponding filing, count each of
 the addresses for that filing.
 
-Show a dictionary of counts for all addresses appearing at least 225
+Show a dictionary of counts for all addresses appearing at least 300
 times.
 
 ### Q15: geographic plotting of postal code
@@ -298,14 +298,14 @@ Additional requirements:
 
 ```python
 west = -90
-east = -55
+east = -75
 north = 50
-south = 35
+south = 37
 ```
 
 * use a Mercator projection, "epsg:2022"
 * the color of each point should indicate the postal code. For example, the postal code of `245 SUMMER STREET\nBOSTON MA 02210` is `2210`. If it's in the form like `53705-1234`, only take `53705`. If it's neither 5 digits number nor 9 digits number, don't use the point.
-* only show the street with a postal code from 40000 to 70000
+* only show the street with a postal code from 30000 to 60000
 * use the "magma" colormap, with a colorbar
 * the color of background is "lightgray"
 
