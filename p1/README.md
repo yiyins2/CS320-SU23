@@ -2,9 +2,7 @@
 
 ## Corrections/Clarifications
 
-* Clarification: Added grading guidelines (Yiyin, Feb 14th 1:14 PM). 
-* Clarification: Added sample output from `tester.py` (Meena, Feb 3rd 6:45 AM).
-* Clarification: Added note about `sum` keyword in `smart_count` function description (Meena, Feb 3rd 7:00 AM).
+* none yet
 
 ## Overview
 
@@ -37,7 +35,7 @@ console.
 
 2. Run `pip3 install pandas==1.4.4 matplotlib==3.5.3`
 
-3. Run `git clone https://github.com/msyamkumar/cs320-s23-projects.git`
+3. Run `git clone https://github.com/yiyins2/CS320-SU23.git`
 
 4. Go to `http://YOUR_IP_ADDRESS:2020/` in the browser (sign in, if prompted)
 
@@ -103,7 +101,7 @@ Submit as follows:
 
 1. "File" > "Download as" > "Notebook (.ipynb)".
 
-2. Go to https://www.msyamkumar.com/cs320/s23/submission.html.
+2. Go to https://tyler.caraza-harter.com/yiyin/su23/submission.html.
 
 3. Select P1.
 
@@ -135,7 +133,7 @@ In other cases where you want to divide 7 by 2 and get an int, you would use `7 
 
 <img src="img/tester.png">
 
-Please keep in mind that even though your code might clear the tester on your local VM, it might fail the tester on the submission portal. It is your responsibility to check that your submission clears auto-grader on the submission portal (course website). You will receive a canvas message when the auto-grader test results are ready - **PLEASE DO NOT IGNORE** THAT and make sure to check your auto-grader test results on time.
+Please keep in mind that even though your code might clear the tester on your local VM, it might fail the tester on the submission portal. It is your responsibility to check that your submission clears auto-grader on the submission portal (course website). You will receive a canvas message when the auto-grader test results are ready - **PLEASE DO NOT IGNORE THAT** - and make sure to check your auto-grader test results on time.
 
 ### Q2: what is `error`?
 
