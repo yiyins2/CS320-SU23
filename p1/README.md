@@ -476,7 +476,7 @@ If you pass `cwd="????"` to `check_output`, you can run the `git log` command in
 
 ### Q26: What are the commit numbers of the 32 earliest commits?
 
-Answer with a list.  Commits with earlier dates should be later in the list.
+Answer with a list.  Commits with earlier dates should be later in the list. You don't need to sort the commits by time. Please directly use the raw order provided by `git log`. 
 
 ### Q27: what did the `README` file contain after the 100th commit?
 

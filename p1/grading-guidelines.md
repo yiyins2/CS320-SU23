@@ -4,7 +4,7 @@
 * The day after the regular deadline: grading process starts
 * Three days after the hard deadline: TAs finish grading
 * Within five days after the hard deadline: grades posted to Canvas and start collecting regrade requests
-    * You can submit regrade requests through the [Grading Issues form](https://docs.google.com/forms/d/e/1FAIpQLSf74qFnkZPHeyWiESxMnxuGq-uOutBAJyH962SQ_zNo3Uzn9w/viewform?usp=sf_link) 
+    * You can submit regrade requests through the [Project Grading Issues Form](https://forms.gle/uSp7bjHWwjqhkeYV7) 
     * The regrade requests are only for TA's mistakes in manual grading 
     * Please do not submit any regrade requests until grades are posted to Canvas 
 * One week after the grade release on Canvas: we will stop collecting regrade requests
@@ -19,6 +19,12 @@
 # Project 1 Grading Guidelines
 **Q25 - Q32:**
 * Hardcoding (e.g., directly displaying final solution): -3 points for each question
+
+**Q25 - Q28:**
+* Didn't use `cwd`: -2 point (only deduct once for all four questions)
+
+**Q27:**
+* Directly copy-pasting the commit number: -1 point
 
 **Q30 - Q32:**
 * Missing x-label or y-label or legend: -1 point (only deduct once for all three plots)
