@@ -54,7 +54,7 @@
 <body>
     <div align="center">
         <h1>TOP SECRET: Current Location!</h1>
-        <button type="button" onclick="btnClicked()" id="locationBtn">
+        <button type="button" onclick="btnClicked()" id="location-button">
             View Location
         </button>
     </div>
@@ -62,7 +62,7 @@
 
     <script>
         function btnClicked() {
-            document.getElementById('locationBtn').innerText = 'Loading...';
+            document.getElementById('location-button').innerText = 'Loading...';
             setTimeout(revealLocation, 1000);
            
             
@@ -76,7 +76,7 @@
         document.body.appendChild(t);
             
         
-         document.getElementById('locationBtn').style.visibility='hidden';
+         document.getElementById('location-button').style.visibility='hidden';
       }
       
 }

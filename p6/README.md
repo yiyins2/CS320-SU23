@@ -257,7 +257,7 @@ using features calculated from the land use data.
 1. start with a GeoDataFrame dataset loaded from `tracts.shp`
 2. add feature columns to that dataset for every key in land_use(found under q14), with the column value being the number of units present of that land type, based on raster data from `lands.zip`.
 Note : Computation takes considerable amount of time with raster data so try to minimize masking operations 
-3. split your GeoDataFrame into train/test using `random_state=200` and `test_size=0.20`.
+3. split your GeoDataFrame into train/test using `random_state=300` and `test_size=0.20`.
 4. Construct a regression model to predict POP100. Use all of the new columns you created in step 2 as the features for training. 
 6. Write a comment discussing what the graph is showing you and how you might use that information in building your own model(Part 2). 
 
@@ -277,7 +277,7 @@ In terms of tester scores, this question is weighted to be worth 2 regular quest
 
 1. Construct at least 2 regression models predicting POP100. They should differ in terms of (a) what columns they use and/or (b) whether or not they're preceded by transformers in an sklearn Pipeline
 2. Perform cross validation on both your models over your training dataset
-3. Write a comment recommending which model you recommend for this prediction task. Factors you might consider are (a) mean of cross validation scores is high, (b) variance of cross validation scores is low, (c) model is simple, and (d) anything else you think is important.
+3. Write a comment recommending which model you recommend for this prediction task. Factors you **must** consider are (a) mean of cross validation scores is high, (b) variance of cross validation scores is low. Factors you might consider are (c) model is simple, and (d) anything else you think is important.
 4. Fit your recommended model to the entire training dataset and score it against the test dataset
 
 ### Q17: How does your recommended model score against the test dataset?

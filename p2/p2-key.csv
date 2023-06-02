@@ -8,4 +8,4 @@ question,type,value,notes
 7,Figure,plt.Figure(),
 8,Figure,plt.Figure(),
 9,int,9,
-10,float,5.99,
+10,float,5.0,

@@ -474,11 +474,11 @@ If you pass `cwd="????"` to `check_output`, you can run the `git log` command in
 
 **Important:** if you use "git checkout" commands (as required for following exercises) to switch the current (HEAD) commit, the output of "git log" will change (it will show the current commit and prior ones, but not future commits).  You may want to add some code that runs "git checkout main" to bring the HEAD back to the latest commit.  Otherwise your answer to this question might only be correct the first time you run the notebook.
 
-### Q26: What are the commit numbers of the 30 earliest commits?
+### Q26: What are the commit numbers of the 32 earliest commits?
 
 Answer with a list.  Commits with earlier dates should be later in the list.
 
-### Q27: what did the `README` file contain after the 2nd commit?
+### Q27: what did the `README` file contain after the 100th commit?
 
 Use `check_output` to run a `git checkout` command to switch to that commit, before reading `flask/README` the way you would read any regular text file in Python (using `open` and `.read`).
 
@@ -563,8 +563,8 @@ We'll want to generate test data of various sizes.  Use this function for that p
 
 ```python
 def rand_df(rows):
-    return pd.DataFrame(np.random.randint(10, size=(rows, 4)),
-                        columns=["A", "B", "C", "D"],
+    return pd.DataFrame(np.random.randint(10, size=(rows, 5)),
+                        columns=["A", "B", "C", "D", "E"],
                         index=[f"r{i}" for i in range(1, rows+1)])
 ```
 
@@ -636,6 +636,6 @@ The `laugh` function is defined as follows:
 
 ```python
 def laugh(x):
-    return "ha" * x
+    return "qwerty" * x
 ```
 
