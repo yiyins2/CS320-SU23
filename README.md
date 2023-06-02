@@ -1,4 +1,4 @@
-# CS320-SU23 (draft, do not start)
+# CS320-SU23
 
 Run the following to clone the repo:
 ```
