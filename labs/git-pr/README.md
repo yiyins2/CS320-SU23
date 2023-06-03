@@ -57,7 +57,7 @@ that wouldn't embarrass you on a resume):
 
 <img src="1.png" width=600>
 
-**Important:** for participation credit, fill [this form](https://forms.gle/kXgwU3Cznnucjxjx9) so that we know you
+**Important:** for participation credit, fill [this form](https://forms.gle/L453Z78V8Ckt2y2U7) so that we know you
   completed this part.
 
 ## Step 2: SSH Keys
@@ -94,8 +94,8 @@ Go to https://github.com/new and create a public repo called
 
 <img src="2.png" width=800>
 
-This should create a repo at https://github.com/msyamkumar/cs320-lab2
-(with your username instead of "msyamkumar").  Go to that URL, and
+This should create a repo at https://github.com/yiyins2/cs320-lab2
+(with your username instead of "yiyins2").  Go to that URL, and
 you'll see something like this:
 
 <img src="3.png" width=1200>
@@ -122,7 +122,7 @@ git config --global user.email "your_email"
 ```
 
 Refresh the GitHub page for your repo at
-https://github.com/msyamkumar/cs320-lab2 (with your username instead
+https://github.com/yiyins2/cs320-lab2 (with your username instead
 of "msyamkumar").  You should now see the first commit, and the
 content of your README.md:
 
@@ -146,7 +146,7 @@ keyboard shortcuts (not the mouse). Do control-O to write the file.
 
 ## Step 4: Pull Request
 
-Visit this repo: https://github.com/msyamkumar/cs320-lab2-datasets.
+Visit this repo: https://github.com/yiyins2/cs320-lab2-datasets.
 It contains a list of datasets in a few different .txt files.  For
 this exercise, you'll add to the list, so spend a few minutes Googling
 for an interesting dataset to add.
@@ -161,14 +161,14 @@ change to a site (like the one above), the process goes like this:
 4. push those changes to your own fork
 5. make a formal request, called a "pull request", for the person of the original repo to integrate the changes on your fork into their codebase
 
-Let's start.  Go back to the https://github.com/msyamkumar/cs320-lab2-datasets page.  Click code, and copy the SSH address.
+Let's start.  Go back to the https://github.com/yiyins2/cs320-lab2-datasets page.  Click code, and copy the SSH address.
 
 <img src="6.png" width=1000>
 
 In the terminal, run this (the part after "git clone" was pasted from what you just copied):
 
 ```
-git clone https://github.com/msyamkumar/cs320-lab2-datasets.git
+git clone 
 cd cs320-lab2-datasets
 ls
 ```
@@ -188,7 +188,7 @@ Going back to the repo on GitHub, click the "fork" button, copying the repo to y
 
 <img src="7.png" width=400>
 
-Go to your newly forked repo, which is still named "cs320-lab2-datasets" like the original, but exists under your account (same URL as https://github.com/msyamkumar/cs320-lab2-datasets, but with "msyamkumar" replaced with your own user name):
+Go to your newly forked repo, which is still named "cs320-lab2-datasets" like the original, but exists under your account (same URL as https://github.com/yiyins2/cs320-lab2-datasets, but with "yiyins2" replaced with your own user name):
 
 <img src="8.png" width=1000>
 
@@ -198,8 +198,8 @@ Now, go back to the terminal, in the directory where you cloned the original rep
 Run `git remote -v`, and you'll see something like this:
 
 ```
-origin	https://github.com/msyamkumar/cs320-lab2-datasets.git (fetch)
-origin	https://github.com/msyamkumar/cs320-lab2-datasets.git (push)
+origin	https://github.com/yiyins2/cs320-lab2-datasets.git (fetch)
+origin	https://github.com/yiyins2/cs320-lab2-datasets.git (push)
 ```
 
 A "remote" is the name for a link to a repo on GitHub, or some other
@@ -217,8 +217,8 @@ You'll see something like this:
 ```
 mycopy	git@github.com:your-account/cs320-lab2-datasets.git (fetch)
 mycopy	git@github.com:your-account/cs320-lab2-datasets.git (push)
-origin	https://github.com/msyamkumar/cs320-lab2-datasets.git (fetch)
-origin	https://github.com/msyamkumar/cs320-lab2-datasets.git (push)
+origin	https://github.com/yiyins2/cs320-lab2-datasets.git (fetch)
+origin	https://github.com/yiyins2/cs320-lab2-datasets.git (push)
 ```
 
 Now, if you want to sync the last commit you made on the main branch
@@ -239,7 +239,7 @@ changes back to the person who owns the original repo.  Click that.
 
 Click "Create pull request".  This gives you the option to type a note to the person who will review your request, below which there is another "Create pull request" button, that you should click again.
 
-If you go to https://github.com/msyamkumar/cs320-lab2-datasets/pulls,
+If you go to https://github.com/yiyins2/cs320-lab2-datasets/pulls,
 you'll see your pull request, along with all the others.  The person
 owning the original repo will review these, deciding which suggested
 changes to integrate and which to reject.
