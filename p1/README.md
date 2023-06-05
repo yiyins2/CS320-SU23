@@ -18,7 +18,7 @@ Learning objectives:
 * write code to analyze the history of a git project
 * measure performance (how long it takes to run things)
 
-**Note:** some browser's have a "dark mode" -- be careful not to use it when looking at plot examples (it often hides axis labels in the examples, which you need for full credit).
+**Note:** some browsers have a "dark mode" -- be careful not to use it when looking at plot examples (it often hides axis labels in the examples, which you need for full credit).
 
 ## Setup
 
