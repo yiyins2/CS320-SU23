@@ -22,7 +22,7 @@ Learning objectives:
 
 ## Setup
 
-Make sure to do the week 2 lab before starting this, as it must be done on your
+Make sure to complete Lab 1A before starting this, as it must be done on your
 virtual machine.
 
 1. SSH to your virtual machine by running `ssh USERNAME@IP_ADDRESS`
@@ -77,7 +77,7 @@ some code, output answer
 
 2. "File" > "Save Notebook"
 
-3. Rrom an SSH session, navigate to the cs320-sp23-projects/p1 directory
+3. From an SSH session, navigate to the cs320-sp23-projects/p1 directory
 
 4. Run `python3 tester.py p1.ipynb` and work on fixing any issues
 
