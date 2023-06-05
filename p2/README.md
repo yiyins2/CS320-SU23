@@ -76,7 +76,7 @@ anybody outside the course.
 
 ## Part 1: Loan Classes
 
-Finish the `Applicant` and `Loan` classes from [lab 4](../labs/loans) (if you haven't already done so).  
+Finish the `Applicant` and `Loan` classes from [lab 2B](../labs/loans) (if you haven't already done so).  
 
 We'll now add a `Bank` class to `loans.py`.  A `Bank` can be created like this (create an class with the necessary constructor for this to work):
 
