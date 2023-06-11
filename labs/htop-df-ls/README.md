@@ -10,6 +10,7 @@ There are two kinds of space that we use for data:
 	- permanently store data in the form of files and folders
 	- long term storage (that is, data is retained on reboot)
 	- slow in operation
+	- Cheaper per bit of space than RAM
 	- usually much larger than RAM
 
 #### Why do you need to learn about space management commands?
@@ -23,11 +24,11 @@ You might encounter resource crunch problems this semester as you learn to deal 
 - Run `htop` on your terminal. The output should look something like this:
 <img src="img/htop.png">
 
-- `htop` shows the programs that are using the top of the resources (memory, CPU, etc.,). The "h" letter indicates that the output is in human readable format (that is, it does not display too many large numbers).
-- On your VM, we have two CPUs (marked by 0 and 1 in `htop` output - see above image). They probably might be running on a single physical chip, but they are two CPU cores on the same chip. The bars and the indicate how much each of those CPUs are being used. You will see a low number if you don't have two many processes (running programs) currently executing on your VM. When I took this snapshot, my CPUs were almost idle. 
-- Below the CPU usage, we see "Mem" usage. Total memory available is 1.93 G. G stands for Gigabyte (aproximately 1 billion bytes). It is interesting that we are using so much memory (835 M; M stands for Megabyte, approximately 1 million bytes) when the CPUs are sitting idly. 
+- `htop` shows the programs that are using the top of the resources (memory, CPU, etc.,). There is also a `top` command, but `htop` is prettier and more human-readable. 
+- On your VM, we have two CPUs (marked by 0 and 1 in `htop` output - see above image). The two CPUs are probably the two cores on the same physical chip. The bars represent how much each of those CPUs are being used. You will see a low number if you don't have two many processes (running programs) currently executing on your VM. When I took this snapshot, my CPUs were almost idle. 
+- Below the CPU usage, we see "Mem" usage. Total memory available is 1.93 G. In `htop`, G stands for Gibibyte (2^30 bytes, approximately 1 billion bytes). It is interesting that we are using so much memory (835 M; M stands for Mebibyte, 2^20 bytes, or approximately 1 million bytes) when the CPUs are sitting idly. 
 	- If too much memory is being used, then your VM becomes slow
-	- How do we get memory back? 1. reboot 2. figure out what process is taking up all that memory 
+	- How do we get memory back? 1. reboot 2. figure out what process is taking up all that memory and terminate the process
 	- Let's focus on option 2 here.
 	- Go to your `jupyterlab` session and click on the "stop" sign (see below image):
 	- As you can see, after you open a notebook for running it keeps running in the background even though you close the tab associated with a notebook
@@ -52,7 +53,7 @@ You might encounter resource crunch problems this semester as you learn to deal 
 - Run `df .` on your terminal. The output should look something like this (it might not match exactly):
 <img src="img/df_output_2.png">
 
-- Right now, I am using 23% of my storage space. It also displays the size in blocks, which is difficult for us to read. Let's use "-h" option, which will enable us to get human readable output.
+- Right now, I am using 23% of my storage space. It also displays the size in blocks, which is difficult for us to read. Let's use "-h" option, which will enable us to get ***h***uman readable output.
 - Run `df . -h` on your terminal. The output should look something like this (it might not match exactly):
 <img src="img/df_output_3.png">
 
@@ -60,9 +61,9 @@ You might encounter resource crunch problems this semester as you learn to deal 
 
 ## Running `ls` to find files to delete for clearing up storage space 
 
-- Change into `labs/htop_df_ls/data` directory on your `terminal`. That is run `cd cs320-s23-projects/labs/htop_df_ls/data`.
+- Change into `labs/htop_df_ls/data` directory on your `terminal`. That is run `cd cs320-su23-projects/labs/htop_df_ls/data`.
 - Then run `ls` command. The output should list all the files and directories. It doesn't show the associated details like size.
-- Try running `ls -l` command. "-l" option shows a list format of output with additional details, including size. The size is still difficult for us to read. Are you able to think of some other option which will make the output more human readable?
+- Try running `ls -l` command. "-l" option shows a ***l***ist format of output with additional details, including size. The size is still difficult for us to read. Are you able to think of some other option which will make the output more human readable?
 - If you were thinking "-h", you got it. Try running `ls -lh`. The output should look something like this:
 <img src="img/ls_lh_output.png">
 
@@ -110,4 +111,4 @@ df2 = df
 <img src="img/wi_csv_5.png">
 
 - **IMPORTANT**: do not forget to close / shutdown `lab2.ipynb`, so that you get the used memory back.
-- We will continue this example during Wednesday's lecture.
+- We will continue this example during Wednesday's lecture. **TODO**
