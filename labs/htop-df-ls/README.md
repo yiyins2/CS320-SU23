@@ -81,7 +81,7 @@ You might encounter resource crunch problems this semester as you learn to deal 
 - As an alternate to deleting files to free up storage space, we can compress files and directories, to save space.
 - Keep your screen split between `terminal` and `jupyterlab`. It is a good idea to run `htop` while writing code to observe how much memory space we are using (consequences of running the code that we are writing).
 - Go to `jupyterlab` session, navigate to `htop_df_ls` directory (the parent directory of `data` directory).
-- Create a new notebook file and name it `lab2.ipynb`. Discuss steps with your group members as needed.
+- Create a new notebook file and name it `lab-perf.ipynb`. Discuss steps with your group members as needed.
 - Create a cell for import statements:
 ```python
 import pandas as pd
@@ -110,5 +110,5 @@ df2 = df
 ```
 <img src="img/wi_csv_5.png">
 
-- **IMPORTANT**: do not forget to close / shutdown `lab2.ipynb`, so that you get the used memory back.
-- We will continue this example during Wednesday's lecture. **TODO**
+- **IMPORTANT**: do not forget to close / shutdown `lab-perf.ipynb`, so that you get the used memory back.
+- We will continue this example during Wednesday's lecture. 

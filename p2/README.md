@@ -161,7 +161,7 @@ aspects.
 
 ## Part 2: Binary Search Tree
 
-Finish the `Node` and `BST` classes from [lab 5](../labs/bst-groups) (if you haven't already done so). 
+Finish the `Node` and `BST` classes from [lab 4A](../labs/bst-groups) (if you haven't already done so). 
 
 **Note:** if we haven't gotten to BSTs in lecture and lab yet, you can still work on some of the questions in parts 3 and 4, but you should wait to work on the ones related to trees.
 
@@ -197,7 +197,7 @@ Don't loop over every loan to answer.  Use your tree to get and count loans with
 
 ### Q5: how tall is the tree?
 
-The height is the number of nodes in the path from the root to the deepest node.  Write a recursive function or method to answer.
+The height is the number of edges in the path from the root to the deepest node.  Write a recursive function or method to answer.
 
 # Individual Part (25%)
 
@@ -231,11 +231,10 @@ Answer with a bar graph, where the y axis should represent the number of applica
 **Note:** The x-axis should be the number of race identities selected by the applicants, not the individual races. Please keep all number of race selections (Do NOT exclude bars which have less than or equal to one race selection).
 
 ### Q9: How many leaf nodes are in the tree?
+
 Write a recursive function or method to count the number of leaf nodes present in the given BST.
 
 ### Q10: What is the fourth largest interest rate in the Bank BST?
 
+Write a **recursive** function or method that can return the top 4 (or N) keys for any subtree.
 
-Write a recursive function or method that can return the top 4 (or N) keys for any subtree.
-
-You MUST answer this question using a **recursive** function. 

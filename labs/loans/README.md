@@ -8,7 +8,7 @@ later when working on P2).
 ## loans.py
 
 In Jupyter, do the following:
-1. Go to cs320-s23-projects/p2
+1. Go to CS320-SU23/p2
 2. Right click in the file explore and create a "New File"
 3. Name it loans.py
 4. Open it
