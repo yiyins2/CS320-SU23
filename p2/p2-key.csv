@@ -3,7 +3,7 @@ question,type,value,notes
 2,float,1.5777777777777777,
 3,dict,"{'65-74': 21, '45-54': 21, '35-44': 13, '55-64': 7, '>74': 5, '25-34': 4}",
 4,int,18,
-5,int,9,
+5,int,8,
 6,Figure,plt.Figure(),
 7,Figure,plt.Figure(),
 8,Figure,plt.Figure(),
