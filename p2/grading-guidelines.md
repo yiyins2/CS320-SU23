@@ -17,4 +17,4 @@ You can find details about the grading process [here](../p1/grading-guidelines.m
     * Q8 should have the exact same shape/value because the count is computed from the same dataset
 
 **Q9 - Q10:**
-* Didn't write a recursive function/method: -2 points
+* Didn't write a recursive function/method: -2 points for each question
