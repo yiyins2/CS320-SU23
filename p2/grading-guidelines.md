@@ -15,3 +15,6 @@ You can find details about the grading process [here](../p1/grading-guidelines.m
     * Q7 loop should spend way more time than BST
     * Q6 and Q7 can have fluctuating milliseconds (or one or two outliers) because the time function depends on the environment of the VM
     * Q8 should have the exact same shape/value because the count is computed from the same dataset
+
+**Q9 - Q10:**
+* Didn't write a recursive function/method: -2 points
