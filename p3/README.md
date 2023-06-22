@@ -2,7 +2,7 @@
 
 ## Corrections/Clarifications
 
-* Correction: Added lab 6 link (Meena, Mar 7th 1:30 PM).
+* none yet
 
 ## Overview
 
@@ -45,7 +45,7 @@ anybody outside the course.
 
 ## Part 1: Base Class `GraphSearcher` and DFS on Matrices (`MatrixSearcher`)
 
-Complete scrape.py from lab exercises if you haven't already done so: [Lab 6](https://github.com/msyamkumar/cs320-s23-projects/tree/main/labs/dfs-class)
+Complete [scrape.py](../labs/dfs-class/README.md) from lab 4B if you haven't already done so.
 
 ## Part 2: BFS on Matrix (`MatrixSearcher`) and Files (`FileSearcher` )
 
