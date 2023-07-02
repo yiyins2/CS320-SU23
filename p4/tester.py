@@ -359,69 +359,24 @@ def browse():
         )
     return points
 
+@test(points=5)
+def rate():
+    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
+    assert status == "200 OK"
+    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
+    assert status == "429 TOO MANY REQUESTS"
+    assert "Retry-After" in headers
+    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.8")
+    assert status == "200 OK"
+    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
+    assert status == "429 TOO MANY REQUESTS"
+    points = 3
 
-@test(points=14)
-def email():
-    emails = {
-        "user@example.com": True,
-        "userATexample.com": False,
-        "user@exampleDOTcom": False,
-        "user123@gmail.com": True,
-        "user@gmail@gmail.com": False,
-        "user@hotmail.cooooooooooom": False
-    }
-
-    if os.path.exists("emails.txt"):
-        os.remove("emails.txt")
-
-    points = 0
-    n = 0
-    for email, valid in emails.items():
-        status, headers, body = app_req("/email", method="POST", input_body=email)
-        if status != "200 OK":
-            print("received status %s when trying to submit email" % status)
-            return 0
-        resp = json.loads(body)
-        if valid:
-            n += 1
-            if resp.lower().find("thank") >= 0:
-                points += 1
-            else:
-                print(
-                    "response '%s' did not contain 'thank' for valid email '%s'"
-                    % (resp, email)
-                )
-
-            if resp.lower().find(str(n)) >= 0:
-                points += 1
-            else:
-                print(
-                    "response '%s' did not contain correct 'n' for valid email '%s'"
-                    % (resp, email)
-                )
-        else:
-            if resp.lower().find("thank") >= 0:
-                print(
-                    "response '%s' contained 'thank' for invalid email '%s'"
-                    % (resp, email)
-                )
-            else:
-                points += 1
-
-    if os.path.exists("emails.txt"):
-        with open("emails.txt") as f:
-            actual = {line.strip() for line in f}
-            expected = {k for k in emails if emails[k]}
-            if actual == expected:
-                points += 6
-            else:
-                print(
-                    "found emails {} in emails.txt, but expected {}".format(
-                        actual, expected
-                    )
-                )
-    else:
-        print("no file emails.txt found")
+    status, headers, body = app_req("/visitors.json", remote_addr="1.2.3.8")
+    if status == "200 OK":
+        points += 1
+    if "1.2.3.7" in body and "1.2.3.8" in body:
+        points += 1
 
     return points
 
@@ -496,7 +451,6 @@ def ab_test_helper(click_through=[], best=0):
 
     return points
 
-
 @test(points=25)
 def ab_test():
     points = 0
@@ -510,24 +464,68 @@ def ab_test():
         points -= 2
     return points
 
-@test(points=5)
-def rate_test():
-    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
-    assert status == "200 OK"
-    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
-    assert status == "429 TOO MANY REQUESTS"
-    assert "Retry-After" in headers
-    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.8")
-    assert status == "200 OK"
-    status, headers, body = app_req("/browse.json", remote_addr="1.2.3.7")
-    assert status == "429 TOO MANY REQUESTS"
-    points = 3
+@test(points=14)
+def email():
+    emails = {
+        "user@example.com": True,
+        "userATexample.com": False,
+        "user@exampleDOTcom": False,
+        "user123@gmail.com": True,
+        "user@gmail@gmail.com": False,
+        "user@hotmail.cooooooooooom": False
+    }
 
-    status, headers, body = app_req("/visitors.json", remote_addr="1.2.3.8")
-    if status == "200 OK":
-        points += 1
-    if "1.2.3.7" in body and "1.2.3.8" in body:
-        points += 1
+    if os.path.exists("emails.txt"):
+        os.remove("emails.txt")
+
+    points = 0
+    n = 0
+    for email, valid in emails.items():
+        status, headers, body = app_req("/email", method="POST", input_body=email)
+        if status != "200 OK":
+            print("received status %s when trying to submit email" % status)
+            return 0
+        resp = json.loads(body)
+        if valid:
+            n += 1
+            if resp.lower().find("thank") >= 0:
+                points += 1
+            else:
+                print(
+                    "response '%s' did not contain 'thank' for valid email '%s'"
+                    % (resp, email)
+                )
+
+            if resp.lower().find(str(n)) >= 0:
+                points += 1
+            else:
+                print(
+                    "response '%s' did not contain correct 'n' for valid email '%s'"
+                    % (resp, email)
+                )
+        else:
+            if resp.lower().find("thank") >= 0:
+                print(
+                    "response '%s' contained 'thank' for invalid email '%s'"
+                    % (resp, email)
+                )
+            else:
+                points += 1
+
+    if os.path.exists("emails.txt"):
+        with open("emails.txt") as f:
+            actual = {line.strip() for line in f}
+            expected = {k for k in emails if emails[k]}
+            if actual == expected:
+                points += 6
+            else:
+                print(
+                    "found emails {} in emails.txt, but expected {}".format(
+                        actual, expected
+                    )
+                )
+    else:
+        print("no file emails.txt found")
 
     return points
 

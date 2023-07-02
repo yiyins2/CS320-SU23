@@ -29,10 +29,11 @@ In this project, you'll build a website that shares a dataset -- you
 get to pick the dataset (possible data sources are listed below).
 
 You'll use the flask framework for the website, which will have the
-following features: (1) **multiple plots** on the homepage that gives an overview of the data, (2) **a page** within the website
-that displays the data in `JSON` format, (3) **a link** to a
-donation page that is optimized via A/B testing, and (4) **a subscribe
-button** that only accepts valid email address formats.
+following features: 
+(1) **a page** within the website that displays the data in `JSON` format, 
+(2) **a link** to a donation page that is optimized via A/B testing,  
+(3) **a subscribe button** that only accepts valid email address formats, and 
+(4) **multiple plots** on the homepage that gives an overview of the data, 
 
 Your `.py` file may be short, perhaps less than 100 lines, but it will probably
 take a fair bit of time to get those lines right.
@@ -47,7 +48,7 @@ First, install some things:
 pip3 install Flask lxml html5lib beautifulsoup4
 ```
 
-# Group Part (75%)
+# Group Part (80%)
 
 For this portion of the project, you may collaborate with your group members in any way (even looking at working code). You may also seek help from 320 staff (mentors, TAs, instructor). You may not seek help from other 320 students (outside your group) or anybody outside the course.
 
@@ -169,6 +170,61 @@ into the middle of a string containing HTML code.
 
 **Hint 2:** look into `_repr_html_` for DataFrames (or possibly `to_html()`).
 
+## Rate Limiting JSON Page
+
+JSON files are used to transmit structured data over network
+connection.  Add a resource at `https://your-ip:port/browse.json` that
+displays the same information as `browse.html`, but in JSON format
+(represent the DataFrame as a list of dicts, such that each dict
+corresponds to one row).
+
+Check the client IP with `request.remote_addr`.  Do not allow more
+than one request per minute from any one IP address.
+
+**Hint 1:** consider combining Flask's `jsonify` with Pandas `to_dict`: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_dict.html
+
+**Hint 2:** we cover rate limiting in the future lecture.
+
+### IP visitors of JSON Page
+Now add a resource at `http://your-ip:5000/visitors.json` that returns a list of the IP addresses that have visited your `browse.json` resource. 
+
+**Hint 1:** use the client IPs stored in previous exercise (rate limiting). 
+
+## Donations
+
+On your donations page, write some text, making your best plea for
+funding. Then, let's find the best design for the homepage, so that
+it's more likely for the testers to click the link to the donations page.
+
+We'll do an A/B test.  Create two versions of the homepage, say, A and B.
+They should differ in some way, perhaps somewhat trivially (e.g., maybe the link
+to donations is blue in version A and in red in version B).
+
+For the first 10 times your homepage is visited, alternate between version
+A and B each time.  After that, pick the best version (the one where
+people click to donate most often), and keep showing it for all future
+visits to the page.
+
+**Hint 1:** consider having a `global` counter in `main.py` to keep track of
+how many times the homepage has been visited.  Consider whether this
+number is 10 or less and whether it is even/odd when deciding between
+showing version A or B for alternations.
+
+**Hint 2:** when somebody visits `donate.html`, we need to know if
+  they took a link from version A or B of the homepage.  The easiest
+  way using query strings. On version A of the homepage, instead of
+  having a regular link to `donate.html`, link to
+  "donate.html?from=A", and in the link on version B to `donate.html`,
+  use "donate.html?from=B".  Then the handler for the `donate.html`
+  route can keep count of how much people are using the links on both
+  versions of the home page.
+  
+**Hint 3:** You don't necessarily need to have two different versions
+of your homepage to make this work. You could use the templating
+approach: once you read your `index.html` file into your program, you
+can edit it. At that point it should be a string, so you could add
+something to it or replace something in it.
+
 ## Emails
 
 There should be a **button** on your site that allows people to share
@@ -241,62 +297,7 @@ added.
 **Note:** you can find information about `jsonify`
 [here](https://flask.palletsprojects.com/en/2.2.x/api/#flask.json.jsonify).
 
-## Donations
-
-On your donations page, write some text, making your best plea for
-funding. Then, let's find the best design for the homepage, so that
-it's more likely for the testers to click the link to the donations page.
-
-We'll do an A/B test.  Create two versions of the homepage, say, A and B.
-They should differ in some way, perhaps somewhat trivially (e.g., maybe the link
-to donations is blue in version A and in red in version B).
-
-For the first 10 times your homepage is visited, alternate between version
-A and B each time.  After that, pick the best version (the one where
-people click to donate most often), and keep showing it for all future
-visits to the page.
-
-**Hint 1:** consider having a `global` counter in `main.py` to keep track of
-how many times the homepage has been visited.  Consider whether this
-number is 10 or less and whether it is even/odd when deciding between
-showing version A or B for alternations.
-
-**Hint 2:** when somebody visits `donate.html`, we need to know if
-  they took a link from version A or B of the homepage.  The easiest
-  way using query strings. On version A of the homepage, instead of
-  having a regular link to `donate.html`, link to
-  "donate.html?from=A", and in the link on version B to `donate.html`,
-  use "donate.html?from=B".  Then the handler for the `donate.html`
-  route can keep count of how much people are using the links on both
-  versions of the home page.
-  
-**Hint 3:** You don't necessarily need to have two different versions
-of your homepage to make this work. You could use the templating
-approach: once you read your `index.html` file into your program, you
-can edit it. At that point it should be a string, so you could add
-something to it or replace something in it.
-
-# Individual Part (25%)
-
-## Rate Limiting JSON Page
-
-JSON files are used to transmit structured data over network
-connection.  Add a resource at `https://your-ip:port/browse.json` that
-displays the same information as `browse.html`, but in JSON format
-(represent the DataFrame as a list of dicts, such that each dict
-corresponds to one row).
-
-Check the client IP with `request.remote_addr`.  Do not allow more
-than one request per minute from any one IP address.
-
-**Hint 1:** consider combining Flask's `jsonify` with Pandas `to_dict`: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_dict.html
-
-**Hint 2:** we cover rate limiting in the future lecture.
-
-## IP visitors of JSON Page
-Now add a resource at `http://your-ip:5000/visitors.json` that returns a list of the IP addresses that have visited your `browse.json` resource. 
-
-**Hint 1:** use the client IPs stored in previous exercise (rate limiting). 
+# Individual Part (20%)
 
 ## Dashboard
 
