@@ -168,7 +168,7 @@ generate a string containing HTML code for the table, then return that
 string. For example, `"<html>{}<html>".format("hello")` would insert `"hello"`
 into the middle of a string containing HTML code. 
 
-**Hint 2:** look into `_repr_html_` for DataFrames (or possibly `to_html()`).
+**Hint 2:** look into `pandas.to_html()`. If you have floats in your table, make sure they are not truncated! By default, `to_html()` truncates floats, for example `1.286957141491255 -> 1.286957`.
 
 ## Rate Limiting JSON Page
 
