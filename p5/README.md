@@ -1,7 +1,7 @@
 # P5: EDGAR Web Logs
 
 ## Corrections/Clarifications
-* fixed incorrect 00 date (Yiyin, Apr 5). Please do a `git pull` to obtain the updated tester. 
+* None yet
 
 ## Overview
 
@@ -297,16 +297,16 @@ Additional requirements:
 * crop to the following lat/lon bounds:
 
 ```python
-west = -90
+west = -95
 east = -75
 north = 50
-south = 37
+south = 25
 ```
 
 * use a Mercator projection, "epsg:2022"
 * the color of each point should indicate the postal code. For example, the postal code of `245 SUMMER STREET\nBOSTON MA 02210` is `2210`. If it's in the form like `53705-1234`, only take `53705`. If it's neither 5 digits number nor 9 digits number, don't use the point.
 * only show the street with a postal code from 30000 to 60000
-* use the "magma" colormap, with a colorbar
+* use the "coolwarm" colormap, with a colorbar
 * the color of background is "lightgray"
 
 The result should look similar to this:
