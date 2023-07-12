@@ -198,7 +198,7 @@ def app_req(path, expect_str=True, expect_errors=False, method="GET", input_body
         "wsgi.version": (1, 0),
         "wsgi.url_scheme": "http",
         "wsgi.input": BytesIO(input_body),
-        "CONTENT_LENGTH": len(input_body),
+        "CONTENT_LENGTH": str(len(input_body)),
         "wsgi.errors": errors,
         "wsgi.multithread": False,
         "wsgi.multiprocess": False,

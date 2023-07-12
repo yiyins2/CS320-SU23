@@ -2,7 +2,7 @@
 
 ## Corrections/Clarifications
 
-* none yet 
+* tester content length type fix (7/12)
 
 ## Hand-in
 
