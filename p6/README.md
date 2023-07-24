@@ -84,7 +84,7 @@ Consult the [Census documentation](https://tigerweb.geo.census.gov/tigerwebmain/
 
 ## Part 2: Predicting Population using Housing Units
 
-You'll need to wait to do the lab before continuing: [lab 13](../labs/lab13.md)
+You'll need to wait to do the lab before continuing: [lab 8A](../labs/lab8A.md)
 
 ### Feature 2: `HU100` (housing units)
 
@@ -269,7 +269,7 @@ Include a comment discussing what the graph is showing you and what it means for
 
 You can search for "How can we interpret what features the model is relying on?" in the lecture examples:
 
-https://github.com/msyamkumar/cs320-lecture-notes/blob/main/lec_30_Regression_1/lecture.ipynb
+https://github.com/yiyins2/CS320-SU23-lecture-notes/blob/main/28_Regression_1/lecture.ipynb
 
 In terms of tester scores, this question is weighted to be worth 2 regular questions.
 
