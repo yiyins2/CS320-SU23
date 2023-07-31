@@ -147,7 +147,7 @@ Only count the requests made by users who were identified as crawlers (see the c
 
 ## Part 2: creating `edgar_utils.py` module
 
-This part is to be started during [lab 7A](../labs/lab7a.md). 
+This part is to be started during [lab 7A](../labs/lab7A.md). 
 
 <!-- TODO: change it to lab11 when move to the public repo. -->
 
