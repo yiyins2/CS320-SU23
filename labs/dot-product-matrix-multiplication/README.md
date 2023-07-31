@@ -1,13 +1,11 @@
 # Vector Dot Product and Matrix Multiplication
 
-In lecture, we've talked about what the dot product means to multiply
-a vector by a vector.  Here, we'll review that, and also learn what it
-means to multiply a matrix by a vector, or a matrix by a matrix.
+In this lab, we'll implement multiplication between two vectors (dot product), a matrix and a vector, and two matrices.
 
 ### 1. Dot Product of Two Vectors
-
-Complete the following function so that it compute the dot product of
-two vectors:
+Vectors are arrays of dimension 1. Dot product of two vectors is 
+the sum of all elementwise multiplication. Complete the following 
+function so that it compute the dot product of two vectors:
 
 ```python
 def v_v_dot_product(v1, v2):
